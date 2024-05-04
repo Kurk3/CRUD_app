@@ -1,12 +1,18 @@
 <?php
+$host = '127.0.0.1';
+$db = 'CRUD_db';
+$user = 'root';
+$pass = 'root';
+$port = '8889';
+
+// Establish connection to the database
+$conn = new mysqli($host, $user, $pass, $db, $port);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
 
-$host = 'sql.endora.cz';
-$db = 'crudaplikacia';    
-$user = 'adamkurek';
-$pass = 'adam123456S';
-$port = 3313;
-
+// Establish connection to the database
 $conn = new mysqli($host, $user, $pass, $db, $port);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
